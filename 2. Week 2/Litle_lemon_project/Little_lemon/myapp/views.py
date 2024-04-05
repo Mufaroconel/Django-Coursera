@@ -44,15 +44,18 @@
 
 # Mapping urls with params
 
-from django.shortcuts import render
-from django.http import HttpResponse
+# from django.shortcuts import render
+# from django.http import HttpResponse
 
-# Your views here
-def menu_items(request, dish):
-    items = {'pasta': 'Delicious pasta dish', 
-             'falafel': 'Crispy falafel', 
-             'cheesecake': 'Creamy cheesecake'
-             }
-    description = items[dish]
-    return HttpResponse(f"<h1>{dish}</h1><p>{description}</p>")
+# # Your views here
+# def menu_items(request, dish):
+#     items = {'pasta': 'Delicious pasta dish', 
+#              'falafel': 'Crispy falafel', 
+#              'cheesecake': 'Creamy cheesecake'
+#              }
+#     description = items[dish]
+#     return HttpResponse(f"<h1>{dish}</h1><p>{description}</p>")
+
+# Regular Expressions
+
 
