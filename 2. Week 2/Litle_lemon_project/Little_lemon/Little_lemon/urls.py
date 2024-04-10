@@ -14,15 +14,37 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
+# from django.contrib import admin
+# from django.urls import path, include
+# from myapp import views
+
+
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     path('', include('myapp.urls')),
+#     path('newapp/', include('newapp.urls')),
+
+
+#     # path('login/', views.userlogin, name='userlogin'),
+#     # path('date_joined/', views.display_date, name = 'display_date'),
+#     # path('menu/', views.menu, name="menu"),
+# ]
+
+
+
+# Instance namespace
+# You can also use the `namespace` parameter in the `include()` function while adding an app’s urlpattern to that of a project.
 from django.contrib import admin
 from django.urls import path, include
-from myapp import views
-
+# from newapp import views
+from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('myapp.urls')),
-    # path('login/', views.userlogin, name='userlogin'),
-    # path('date_joined/', views.display_date, name = 'display_date'),
-    # path('menu/', views.menu, name="menu"),
+     path('admin/', admin.site.urls),
+     path('', include('myapp.urls')),
+     path('newapp/', include('newapp.urls', namespace='newapp')),
+     path('home/', views.home, name='home'),
 ]
+
+handler404 = 'Little_lemon.views.handler404'

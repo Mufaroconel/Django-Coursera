@@ -58,4 +58,24 @@
 
 # Regular Expressions
 
+from django.shortcuts import render
+from django.http import HttpResponse, HttpResponseNotFound
 
+def index(request):
+    return HttpResponse("This is working fine..")
+
+
+# Handling errors in views
+
+# from django.shortcuts import render
+# from django.http import HttpResponse, HttpResponseNotFound
+
+def notfound_request(request):
+    #...
+    condition = True
+    if condition == True:
+        # return HttpResponseNotFound('<h1>Page not found</h1>')
+        #can also return an HttpResponse with the status code denoting the type of error
+        return HttpResponse('<h1>Page not found</h1>', status='404')
+    else:
+        return HttpResponse('<h1>Page found</h1>')
