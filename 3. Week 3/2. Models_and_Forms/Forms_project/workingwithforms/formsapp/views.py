@@ -1,10 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .forms import ApplicationForm
+from formsapp.forms import ApplicationForm
 
 
 # Create your views here.
-def index(request):
+def form_view(request):
     form = ApplicationForm()
     if request.method == 'POST':
         form = ApplicationForm(request.POST)
