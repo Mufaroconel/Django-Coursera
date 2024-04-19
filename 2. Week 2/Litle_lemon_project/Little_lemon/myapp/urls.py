@@ -30,5 +30,4 @@ urlpatterns = [
     path('', views.index, name="index"),
     path('notfound/', views.notfound_request, name="notfound_request"),
 ]
-
 # Adding another app in the project to appreciate the 
