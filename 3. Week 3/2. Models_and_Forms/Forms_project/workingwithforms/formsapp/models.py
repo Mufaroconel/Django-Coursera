@@ -6,4 +6,4 @@ class Applicant(models.Model):
     address = models.CharField(max_length=100) 
 
 def records(self):
-    return self.name + ':' + self.address
+    return f"{self.name},{self.address}"

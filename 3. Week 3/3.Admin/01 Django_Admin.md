@@ -19,18 +19,19 @@
     - Run `python3 manage.py createsuperuser`.
     - Provide username, email, and password.
     - Follow prompts to create a superuser.
-
+![alt text](image.png)
 - **Accessing Admin Interface**:
     - Open the default URL in the browser.
     - Append `/admin` to the URL.
     - Log in using the created superuser credentials.
 
+![alt text](image-2.png)
 - **Overview**:
     - Basic interface with options to manage groups and users.
     - Sample models listed, such as reservations.
     - Ability to add, change, or delete configurations.
     - Options to modify user details, assign permissions, and view user history.
-
+![alt text](image-1.png)
 ### Utility of Django Admin Interface
 
 - **Time-saving Tool**:
